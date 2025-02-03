@@ -5,12 +5,19 @@ DNA extraction tests from bird gut microbiomes
 ## Repository structure
 
 ├── DNA_extraction_tests.Rproj
+
 ├── LICENSE
+
 ├── README.md
+
 ├── code
+
 │   ├── 0-dada2.R (*)
+
 │   ├── 0-metadata_formatting.R
+
 │   ├── 1.1-phyloseq.R
+
 │   ├── 1.2-phyloseq_figures.R
 │   ├── 2.1-DNAyield_analyses.R
 │   ├── 2.2-DNAyield_figures.R
