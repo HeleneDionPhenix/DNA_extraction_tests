@@ -8,7 +8,7 @@ DNA extraction tests from bird gut microbiomes
 |─ LICENSE  
 |─ README.md  
 |─ code  
-│   |─ 0-dada2.R (*)  
+│   |─ 0-dada2.R  
 │   |─ 0-metadata_formatting.R  
 │   |─ 1.1-phyloseq.R  
 │   |─ 1.2-phyloseq_figures.R  
@@ -33,9 +33,9 @@ DNA extraction tests from bird gut microbiomes
 │   |─ dada2  
 │       |- 0-dada2.RData  
 │       |- 0-taxa_dada2.txt  
-│       |- fastq_BCC (not included)(*)  
-│       |- fastq_BT (not included)(*)  
-│       |- SILVA138.1 (not included)(*)  
+│       |- fastq_BCC (not included)  
+│       |- fastq_BT (not included)  
+│       |- SILVA138.1 (not included)  
 |─ figure  
 │   |─ 1-DNAyield_Kit_comparison.png  
 │   |─ 3-Diversity_Kit_comparison.png  
