@@ -31,11 +31,11 @@ DNA extraction tests from bird gut microbiomes
 │&nbsp; &nbsp; &nbsp; |─ 4-output_community_analyses.Data <br>
 │&nbsp; &nbsp; &nbsp; |─ README.md <br>
 │&nbsp; &nbsp; &nbsp; |─ dada2 <br>
-│&nbsp; &nbsp; &nbsp; │&nbsp; &nbsp; &nbsp; |- 0-dada2.RData <br>
-│&nbsp; &nbsp; &nbsp; │&nbsp; &nbsp; &nbsp; |- 0-taxa_dada2.txt <br>
-│&nbsp; &nbsp; &nbsp; │&nbsp; &nbsp; &nbsp; |- fastq_BCC (not included) <br>
-│&nbsp; &nbsp; &nbsp; │&nbsp; &nbsp; &nbsp; |- fastq_BT (not included) <br>
-│&nbsp; &nbsp; &nbsp; │&nbsp; &nbsp; &nbsp; |- SILVA138.1 (not included) <br>
+│&nbsp; &nbsp; &nbsp; │&nbsp; &nbsp; &nbsp; |-- 0-dada2.RData <br>
+│&nbsp; &nbsp; &nbsp; │&nbsp; &nbsp; &nbsp; |-- 0-taxa_dada2.txt <br>
+│&nbsp; &nbsp; &nbsp; │&nbsp; &nbsp; &nbsp; |-- fastq_BCC (not included) <br>
+│&nbsp; &nbsp; &nbsp; │&nbsp; &nbsp; &nbsp; |-- fastq_BT (not included) <br>
+│&nbsp; &nbsp; &nbsp; │&nbsp; &nbsp; &nbsp; |-- SILVA138.1 (not included) <br>
 |─ figure <br>
 │&nbsp; &nbsp; &nbsp; |─ 1-DNAyield_Kit_comparison.png <br>
 │&nbsp; &nbsp; &nbsp; |─ 3-Diversity_Kit_comparison.png <br>
@@ -46,7 +46,7 @@ DNA extraction tests from bird gut microbiomes
 │&nbsp; &nbsp; &nbsp; |─ S1_3-BT_Extraction_controls.png <br>
 │&nbsp; &nbsp; &nbsp; |─ S1_4-PCR_controls.png <br>
 │&nbsp; &nbsp; &nbsp; |─ S3_1-PCoA_Without_StoolNorgen.png <br>
-│&nbsp; &nbsp; &nbsp; └── S4_1-PCoA_Species_comparison.png <br>
+│&nbsp; &nbsp; &nbsp; |─ S4_1-PCoA_Species_comparison.png <br>
 |─ table <br>
 │&nbsp; &nbsp; &nbsp; |─ 2-BCC_PERMANOVA.docx <br>
 │&nbsp; &nbsp; &nbsp; |─ S2_1-BCC_DNAyield.docx <br>
