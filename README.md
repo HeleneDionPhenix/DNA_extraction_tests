@@ -8,7 +8,7 @@ DNA extraction tests from bird gut microbiomes
 |─ LICENSE  
 |─ README.md  
 |─ code  
-│   |─ 0-dada2.R  
+│    |─ 0-dada2.R  
 │   |─ 0-metadata_formatting.R  
 │   |─ 1.1-phyloseq.R  
 │   |─ 1.2-phyloseq_figures.R  
