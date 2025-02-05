@@ -1,13 +1,16 @@
 # DNA_extraction_tests
 
-DNA extraction tests from bird gut microbiomes
+DNA extraction tests from bird gut microbiomes by Hélène Dion-Phénix
+
+This repository contains R scripts for comparing different DNA extraction protocols used in the study of bacterial microbiota from the feces of black-capped chickadees and blue tits. We compared five commercial kits, two rinsing solutions prior to extraction, and two elution protocols. The code files are numbered and can be run sequentially, starting with the raw data, or any specific code can be run independently using intermediate *RData* objects. The general structure of the repository is given below. A README file is available for the data and the codes in the corresponding folders.
 
 ## Project Directory Structure
 
 |─ DNA_extraction_tests.Rproj <br> 
 |─ LICENSE <br>
 |─ README.md <br>
-|─ code  
+|─ code <br>
+│&nbsp; &nbsp; &nbsp; |─ README.md <br>
 │&nbsp; &nbsp; &nbsp; |─ 0-dada2.R <br>
 │&nbsp; &nbsp; &nbsp; |─ 0-metadata_formatting.R <br>
 │&nbsp; &nbsp; &nbsp; |─ 1.1-phyloseq.R <br>
@@ -22,6 +25,7 @@ DNA extraction tests from bird gut microbiomes
 │&nbsp; &nbsp; &nbsp; |─ 4.2-community_figures.R <br> 
 │&nbsp; &nbsp; &nbsp; |─ 4.3-community_tables.R <br>
 |─ data <br>
+│&nbsp; &nbsp; &nbsp; |─ README.md <br>
 │&nbsp; &nbsp; &nbsp; |─ 0-metadata.RData <br>
 │&nbsp; &nbsp; &nbsp; |─ 0-metadata_and_DNAquantification.csv <br>
 │&nbsp; &nbsp; &nbsp; |─ 1-phyloseq_objects.RData <br>
@@ -29,7 +33,6 @@ DNA extraction tests from bird gut microbiomes
 │&nbsp; &nbsp; &nbsp; |─ 2-output_models_DNAyield.RData <br>
 │&nbsp; &nbsp; &nbsp; |─ 3-output_model_diversity.RData <br>
 │&nbsp; &nbsp; &nbsp; |─ 4-output_community_analyses.Data <br>
-│&nbsp; &nbsp; &nbsp; |─ README.md <br>
 │&nbsp; &nbsp; &nbsp; |─ dada2 <br>
 │&nbsp; &nbsp; &nbsp; │&nbsp; &nbsp; &nbsp; |-- 0-dada2.RData <br>
 │&nbsp; &nbsp; &nbsp; │&nbsp; &nbsp; &nbsp; |-- 0-taxa_dada2.txt <br>
@@ -56,4 +59,9 @@ DNA extraction tests from bird gut microbiomes
 │&nbsp; &nbsp; &nbsp; |─ S3_1-BCC_PERMANOVA_without_StoolNorgen.docx <br>
 │&nbsp; &nbsp; &nbsp; |─ S4_1-PERMANOVA_Species_comparison.docx <br>
     
-*The folder fastq_BCC, fastq_BT, and SILVA138.1 need to be added to run code 0-dada2.R  *
+*The folder fastq_BCC, fastq_BT, and SILVA138.1 need to be added to the directory where specified above to run code 0-dada2.R*
+
+*To load the fastq files : https://figshare.com/projects/DNA_extraction_of_bird_gut_microbiomes/220255*
+
+*To load the SILVA Ribosomal RNA Gene Database Project, version 138.1: https://www.arb-silva.de/news/view/2024/07/11/silva-release-1382/*
+
