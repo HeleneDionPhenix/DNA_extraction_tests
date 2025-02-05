@@ -6,7 +6,7 @@ The file *0-metadata_and_quantification.csv* associate each sample to the corres
 
 | Variable name | Description | Values |
 | :------------ | ----------- | ------ |
-| sample.names | Sample identifier |
+| sample.names | Sample identifier | (ex: exp1_PowerSoil-eau-1elu-1) |
 | species | Bird species | [BCC: Black-capped chickadee, BT: Blue tit] |
 | type | Sample type | [sample: feces sample, ctrl: PCR or extraction control] |
 | kit | Extraction kit used | [PowerSoil Pro, QuickDNA, PureLink, MagMAX, StoolNorgen] |
