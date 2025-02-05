@@ -4,56 +4,56 @@ DNA extraction tests from bird gut microbiomes
 
 ## Project Directory Structure
 
-|─ DNA_extraction_tests.Rproj    
-|─ LICENSE  
-|─ README.md  
+|─ DNA_extraction_tests.Rproj <br> 
+|─ LICENSE <br>
+|─ README.md <br>
 |─ code  
-│&nbsp; &nbsp; &nbsp;|─ 0-dada2.R    
-│   |─ 0-metadata_formatting.R    
-│   |─ 1.1-phyloseq.R    
-│   |─ 1.2-phyloseq_figures.R    
-│   |─ 2.1-DNAyield_analyses.R    
-│   |─ 2.2-DNAyield_figures.R    
-│   |─ 2.3-DNAyield_tables.R    
-│   |─ 3.1-diversity_analyses.R    
-│   |─ 3.2-diversity_figures.R    
-│   |─ 3.3-diversity_tables.R    
-│   |─ 4.1-community_analyses.R    
-│   |─ 4.2-community_figures.R    
-│   |─ 4.3-community_tables.R    
+│&nbsp; &nbsp; &nbsp; |─ 0-dada2.R <br>
+│&nbsp; &nbsp; &nbsp; |─ 0-metadata_formatting.R <br>
+│&nbsp; &nbsp; &nbsp; |─ 1.1-phyloseq.R <br>
+│&nbsp; &nbsp; &nbsp; |─ 1.2-phyloseq_figures.R&nbsp; &nbsp; &nbsp;  
+│&nbsp; &nbsp; &nbsp; |─ 2.1-DNAyield_analyses.R&nbsp; &nbsp; &nbsp;  
+│&nbsp; &nbsp; &nbsp; |─ 2.2-DNAyield_figures.R&nbsp; &nbsp; &nbsp;  
+│&nbsp; &nbsp; &nbsp; |─ 2.3-DNAyield_tables.R&nbsp; &nbsp; &nbsp;  
+│&nbsp; &nbsp; &nbsp; |─ 3.1-diversity_analyses.R&nbsp; &nbsp; &nbsp;  
+│&nbsp; &nbsp; &nbsp; |─ 3.2-diversity_figures.R&nbsp; &nbsp; &nbsp;  
+│&nbsp; &nbsp; &nbsp; |─ 3.3-diversity_tables.R&nbsp; &nbsp; &nbsp;  
+│&nbsp; &nbsp; &nbsp; |─ 4.1-community_analyses.R&nbsp; &nbsp; &nbsp;  
+│&nbsp; &nbsp; &nbsp; |─ 4.2-community_figures.R&nbsp; &nbsp; &nbsp;  
+│&nbsp; &nbsp; &nbsp; |─ 4.3-community_tables.R&nbsp; &nbsp; &nbsp;  
 |─ data  
-│   |─ 0-metadata.R  Data  
-│   |─ 0-metadata_and_DNAquantification.csv  
-│   |─ 1-phyloseq_objects.R  Data  
-│   |─ 1-phyloseq_objects_notRarefied.R  Data  
-│   |─ 2-output_models_DNAyield.R  Data  
-│   |─ 3-output_model_diversity.R  Data  
-│   |─ 4-output_community_analyses.R  Data  
-│   |─ README.md  
-│   |─ dada2  
-│   │   |- 0-dada2.R  Data  
-│   │   |- 0-taxa_dada2.txt  
-│   │   |- fastq_BCC (not included)  
-│   │   |- fastq_BT (not included)  
-│   │   |- SILVA138.1 (not included)  
+│&nbsp; &nbsp; &nbsp; |─ 0-metadata.R  Data  
+│&nbsp; &nbsp; &nbsp; |─ 0-metadata_and_DNAquantification.csv  
+│&nbsp; &nbsp; &nbsp; |─ 1-phyloseq_objects.R  Data  
+│&nbsp; &nbsp; &nbsp; |─ 1-phyloseq_objects_notRarefied.R  Data  
+│&nbsp; &nbsp; &nbsp; |─ 2-output_models_DNAyield.R  Data  
+│&nbsp; &nbsp; &nbsp; |─ 3-output_model_diversity.R  Data  
+│&nbsp; &nbsp; &nbsp; |─ 4-output_community_analyses.R  Data  
+│&nbsp; &nbsp; &nbsp; |─ README.md  
+│&nbsp; &nbsp; &nbsp; |─ dada2  
+│&nbsp; &nbsp; &nbsp; │&nbsp; &nbsp; &nbsp; |- 0-dada2.R  Data  
+│&nbsp; &nbsp; &nbsp; │&nbsp; &nbsp; &nbsp; |- 0-taxa_dada2.txt  
+│&nbsp; &nbsp; &nbsp; │&nbsp; &nbsp; &nbsp; |- fastq_BCC (not included)  
+│&nbsp; &nbsp; &nbsp; │&nbsp; &nbsp; &nbsp; |- fastq_BT (not included)  
+│&nbsp; &nbsp; &nbsp; │&nbsp; &nbsp; &nbsp; |- SILVA138.1 (not included)  
 |─ figure  
-│   |─ 1-DNAyield_Kit_comparison.png  
-│   |─ 3-Diversity_Kit_comparison.png  
-│   |─ 4_Barplot_Microbiota_Kit_comparison.png  
-│   |─ 5-PCoA_Microbiota_Kit_comparison.png  
-│   |─ S1_1-Rarefaction_Curves.png  
-│   |─ S1_2-BCC_Extraction_controls.png  
-│   |─ S1_3-BT_Extraction_controls.png  
-│   |─ S1_4-PCR_controls.png  
-│   |─ S3_1-PCoA_Without_StoolNorgen.png  
-│   └── S4_1-PCoA_Species_comparison.png  
+│&nbsp; &nbsp; &nbsp; |─ 1-DNAyield_Kit_comparison.png  
+│&nbsp; &nbsp; &nbsp; |─ 3-Diversity_Kit_comparison.png  
+│&nbsp; &nbsp; &nbsp; |─ 4_Barplot_Microbiota_Kit_comparison.png  
+│&nbsp; &nbsp; &nbsp; |─ 5-PCoA_Microbiota_Kit_comparison.png  
+│&nbsp; &nbsp; &nbsp; |─ S1_1-Rarefaction_Curves.png  
+│&nbsp; &nbsp; &nbsp; |─ S1_2-BCC_Extraction_controls.png  
+│&nbsp; &nbsp; &nbsp; |─ S1_3-BT_Extraction_controls.png  
+│&nbsp; &nbsp; &nbsp; |─ S1_4-PCR_controls.png  
+│&nbsp; &nbsp; &nbsp; |─ S3_1-PCoA_Without_StoolNorgen.png  
+│&nbsp; &nbsp; &nbsp; └── S4_1-PCoA_Species_comparison.png  
 |─ table  
-    |─ 2-BCC_PERMANOVA.docx  
-    |─ S2_1-BCC_DNAyield.docx  
-    |─ S2_1-BT_DNAyield.docx  
-    |─ S2_2-BCC_Diversity.docx  
-    |─ S2_2-BT-Diversity.docx  
-    |─ S3_1-BCC_PERMANOVA_without_StoolNorgen.docx  
-    |─ S4_1-PERMANOVA_Species_comparison.docx  
+&nbsp; &nbsp; &nbsp;  |─ 2-BCC_PERMANOVA.docx  
+&nbsp; &nbsp; &nbsp;  |─ S2_1-BCC_DNAyield.docx  
+&nbsp; &nbsp; &nbsp;  |─ S2_1-BT_DNAyield.docx  
+&nbsp; &nbsp; &nbsp;  |─ S2_2-BCC_Diversity.docx  
+&nbsp; &nbsp; &nbsp;  |─ S2_2-BT-Diversity.docx  
+&nbsp; &nbsp; &nbsp;  |─ S3_1-BCC_PERMANOVA_without_StoolNorgen.docx  
+&nbsp; &nbsp; &nbsp;  |─ S4_1-PERMANOVA_Species_comparison.docx  
     
 *The folder fastq_BCC, fastq_BT, and SILVA138.1 need to be added to run code 0-dada2.R  *
