@@ -65,13 +65,13 @@ Proportion (adjusted) if the total variation in the composition among sampled ex
 │&nbsp; &nbsp; &nbsp; |─ 0-dada2.R <br>
 │&nbsp; &nbsp; &nbsp; |─ 0-metadata_formatting.R <br>
 │&nbsp; &nbsp; &nbsp; |─ 1.1-phyloseq.R <br>
-│&nbsp; &nbsp; &nbsp; |─ 1.2-phyloseq_figures.R <br> 
+│&nbsp; &nbsp; &nbsp; |─ 1.2-phyloseq_figures.R <br>
 │&nbsp; &nbsp; &nbsp; |─ 2.1-DNAyield_analyses.R <br>
-│&nbsp; &nbsp; &nbsp; |─ 2.2-DNAyield_figures.R <br>  
+│&nbsp; &nbsp; &nbsp; |─ 2.2-DNAyield_figures.R <br>
 │&nbsp; &nbsp; &nbsp; |─ 2.3-DNAyield_tables.R <br>
 │&nbsp; &nbsp; &nbsp; |─ 3.1-diversity_analyses.R <br>
 │&nbsp; &nbsp; &nbsp; |─ 3.2-diversity_figures.R <br>
 │&nbsp; &nbsp; &nbsp; |─ 3.3-diversity_tables.R <br>
-│&nbsp; &nbsp; &nbsp; |─ 4.1-community_analyses.R <br> 
-│&nbsp; &nbsp; &nbsp; |─ 4.2-community_figures.R <br> 
+│&nbsp; &nbsp; &nbsp; |─ 4.1-community_analyses.R <br>
+│&nbsp; &nbsp; &nbsp; |─ 4.2-community_figures.R <br>
 │&nbsp; &nbsp; &nbsp; |─ 4.3-community_tables.R <br>
