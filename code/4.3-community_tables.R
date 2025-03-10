@@ -33,8 +33,8 @@ perm.tab.exp1 <- data.frame(coef = c("Kits", "Rinsing solutions", "Numbers of el
 (t.exp1 <- as_flextable(perm.tab.exp1))
 
 save_as_docx(
-  "BCC - Bacterial composition" = t.exp1, 
-  path = "table/2-BCC_PERMANOVA.docx")
+  "Table 2. BCC - Bacterial composition" = t.exp1, 
+  path = "table/Table_2.docx")
 
 
 ## Whithout norgen------------------------------------------------------------
@@ -49,8 +49,8 @@ perm.tab.nonor <- data.frame(coef = c("Kits", "Rinsing solutions", "Numbers of e
 (t.nonor <- as_flextable(perm.tab.nonor))
 
 save_as_docx(
-  "BCC - Whithout StoolNorgen" = t.nonor, 
-  path = "table/S3_1-BCC_PERMANOVA_whithout_StoolNorgen.docx")
+  "Table C1" = t.nonor, 
+  path = "table/Table_C1.docx")
 
 
 ## Two species ------------------------------------------------------------
@@ -65,5 +65,5 @@ perm.tab.exp1_2 <- data.frame(coef = c("Species", "Kits", "Rinsing solutions", "
 (t.exp1_2 <- as_flextable(perm.tab.exp1_2))
 
 save_as_docx(
-  "BCC & BT - Bacterial composition" = t.exp1_2, 
-  path = "table/S4_1-PERMANOVA_Species_comparison.docx")
+  "Table C2" = t.exp1_2, 
+  path = "table/Table_C2.docx")

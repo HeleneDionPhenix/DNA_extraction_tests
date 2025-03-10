@@ -23,7 +23,7 @@ library(ggnewscale)
 # Import data -------------------------------------------------------------
 
 rm(list = ls())
-load("data/3-output_community_analyses.RData")
+load("data/4-output_community_analyses.RData")
 
 # PCoA Figures -----------------------------------------------------------------
 
@@ -234,12 +234,12 @@ p.pcoa <- ggarrange(p.exp1, p.exp2,
                     labels = "auto")
 
 ggsave(
-  "figure/5-PCoA_Microbiota_Kit_comparison.png",
+  "figure/Figure_5.png",
   p.pcoa,
-  width = 15,
-  height = 9,
-  units = "cm",
-  dpi = 300
+  width = 3740,
+  height = 2494,
+  units = "px",
+  dpi = 500
 )
 
 # Bar plot figures ----------------------------------------------------------------
@@ -279,14 +279,17 @@ p.bp.exp1 <- plot_nested_bar(ps_obj = top_nested.exp1$ps_obj,
                                       "PureLink" = "PureLink"))) +
   ylab('ASVs Relative Abundance') +
   xlab("Sample")+
-  theme_classic(base_size=16) +
+  theme_classic(base_size=14) +
   ggtitle("Black-capped chickadee") +
-  theme(plot.title = element_text(size = 16, face = "bold", hjust = 0.5),
+  theme(plot.title = element_text(size = 14, face = "bold", hjust = 0.5),
     axis.text.y=element_blank(),
     axis.ticks.y=element_blank(),
-    strip.text = element_text(size = 16),
-    legend.text = element_text(size = 14),
-    plot.margin = margin(t=0,r=0,l=0,b=50, unit = "pt"))
+    strip.text = element_text(size = 12),
+    legend.text = element_text(size = 12),
+    legend.key.size = unit(0.3, 'cm'),
+    legend.key.height = unit(0.3, 'cm'),
+    legend.key.width = unit(1, 'cm'), 
+    plot.margin = margin(t=10,r=0,l=0,b=50, unit = "pt"))
 
 p.bp.exp1
 
@@ -319,13 +322,16 @@ p.bp.exp2 <- plot_nested_bar(ps_obj = top_nested$ps_obj,
                                       "PureLink" = "PureLink"))) +
   ylab('ASVs Relative Abundance') +
   xlab('Sample')+
-  theme_classic(base_size=16) +
+  theme_classic(base_size=14) +
   ggtitle("Blue tit") +
-  theme(plot.title = element_text(size = 16, face = "bold", hjust = 0.5),
+  theme(plot.title = element_text(size = 14, face = "bold", hjust = 0.5),
     axis.text.y=element_blank(),
     axis.ticks.y=element_blank(),
-    strip.text = element_text(size = 16),
-    legend.text = element_text(size = 14),
+    strip.text = element_text(size = 12),
+    legend.text = element_text(size = 12),
+    legend.key.size = unit(0.3, 'cm'),
+    legend.key.height = unit(0.3, 'cm'),
+    legend.key.width = unit(1, 'cm'), 
     plot.margin = margin(t=0,r=0,l=0,b=50, unit = "pt"))
 
 p.bp.exp2
@@ -339,11 +345,12 @@ p.bp
 
 
 ggsave(
-  "figure/4_Barplot_Microbiota_Kit_comparison.png",
+  "figure/Figure_4.png",
   p.bp,
-  width = 10,
-  height = 13,
-  dpi = 300
+  width = 3740,
+  height = 4862,
+  units = "px",
+  dpi = 500
 )
 
 
@@ -440,7 +447,7 @@ p.nonor <- ggplot(ord.nonor, aes(x=x, y=y, color = Kit)) +
 p.nonor
 
 ggsave(
-  "figure/S3_1-PCoA_Whithout_StoolNorgen.png",
+  "figure/Figure_C1.png",
   p.nonor,
   width = 5.92,
   height = 4.07,
@@ -546,7 +553,7 @@ p.exp1_2 <- ggplot(ord.exp1_2, aes(x=x, y=y), color = kit) +
 p.exp1_2
 
 ggsave(
-  "figure/S4_1-PCoA_Species_comparison.png",
+  "figure/Figure_C2.png",
   p.exp1_2,
   width = 13,
   height = 8,

@@ -151,10 +151,10 @@ p.dna
 
 # Export Figure in png
 ggsave(
-  "figure/1-DNAyield_Kit_comparison.png",
+  "figure/Figure_1.png",
   p.dna,
-  width = 15,
-  height = 10,
-  units = "cm",
-  dpi = 300
+  width = 3740,
+  height = 2494,
+  units = "px",
+  dpi = 500
 )

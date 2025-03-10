@@ -16,7 +16,7 @@ library(ggplot2)
 # Import data -------------------------------------------------------------
 
 rm(list = ls())
-load("data/4-output_model_diversity.RData")
+load("data/3-output_model_diversity.RData")
 
 # Figures ------------------------------------------------------------------
 
@@ -141,10 +141,10 @@ p.div <- ggarrange(p.exp1, p.exp2,
 p.div
 
 ggsave(
-  "figure/3-Diversity_Kit_comparison.png",
+  "figure/Figure_3.png",
   p.div,
-  width = 15,
-  height = 10,
-  units = "cm",
-  dpi = 300
+  width = 3740,
+  height = 2494,
+  units = "px",
+  dpi = 500
 )

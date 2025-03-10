@@ -27,37 +27,137 @@ load("data/1-phyloseq_objects_notRarefied.RData")
 
 # Rarefaction figures -----------------------------------------------
 
-png("figure/S1_1-Rarefaction_Curves.png", width = 600, height = 600)
+## Black-capped chickadee --------------------------------------------------
 
-par(mfrow = c(2,1))
+#create ggplot2 object for rarecurves
+rc.exp1 <- rarecurve(comm.exp1, 
+                    step=100,
+                    label=FALSE, 
+                    xlim=c(0,15000), 
+                    tidy = T)
+names(rc.exp1)[1] <- "sample.names"
 
-cols <- rep("black", 77)
-cols[which(rowSums(comm.exp1) < 12037)] <- "red"
-cols[which(data.exp$'1'$type == "ctrl")] <- "blue"
-cols[which(data.exp$'1'$num == "positive")] <- "green"
+#add data
+rc.exp1 <- left_join(rc.exp1, data.exp$'1', by = "sample.names")
 
-rarecurve(comm.exp1, step=100,label=FALSE, xlim=c(0,15000),
-          xlab = "Number of sequences",
-          ylab = "Number of species",
-          col = cols)
-abline(v = 12037, col = "red")
-mtext(side=3, adj=0, line=2.0, 'a', cex = 1.5) 
+table(rc.exp1$num)
+
+rc.exp1$rareGroup <- "sample"
+rc.exp1[which(rc.exp1$nseq < 12037), 
+       "rareGroup"] <- "excluded"
+rc.exp1[which(rc.exp1$type == "ctrl"), 
+       "rareGroup"] <- "ctrl_neg"
+rc.exp1[which(rc.exp1$num == "positive"), 
+        "rareGroup"] <- "sample"
+
+rc.exp1 <- rc.exp1[order(rc.exp1$nseq),]
+
+p.exp1 <- ggplot(rc.exp1,
+                aes(x = Sample,
+                    y = Species,
+                    group = sample.names)) +
+  geom_line(aes(color = rareGroup,
+                size = rareGroup)) +
+  scale_color_manual(name = "",
+                     values = c("ctrl_neg" = "blue",
+                                "sample" = "black",
+                                "excluded" = "red"),
+                     labels = c("ctrl_neg" = "Negative control",
+                                "sample" = "Sample",
+                                "excluded" = "Excluded")) +
+  scale_size_manual(name = "",
+                    values = c("ctrl_neg" = 0.5,
+                               "sample" = 0.3,
+                               "excluded" = 0.5),
+                    labels = c("ctrl_neg" = "Negative control",
+                               "sample" = "Sample",
+                               "excluded" = "Excluded")) +
+  geom_vline(xintercept = 12037,
+             linetype = 5) +
+  xlim(1,17000) +
+  xlab("Number of sequences") +
+  ylab("Number of species") +
+  ggtitle("Black-capped chickadee") +
+  theme_bw(base_size = 14,
+           base_family = "Times New Roman") +
+  theme(legend.position = "none",
+        plot.title = element_text(size = 14, face = "bold"))
+p.exp1
+
+## Blue tit ---------------------------------------------------------------
+
+#create ggplot2 object for rarecurves
+rc.exp2 <- rarecurve(comm.exp2, 
+                     step=100,
+                     label=FALSE, 
+                     xlim=c(0,15000), 
+                     tidy = T)
+names(rc.exp2)[1] <- "sample.names"
+
+#add data
+rc.exp2 <- left_join(rc.exp2, data.exp$'2', by = "sample.names")
+
+table(rc.exp2$num)
+
+rc.exp2$rareGroup <- "sample"
+rc.exp2[which(rc.exp2$nseq < 12037), 
+        "rareGroup"] <- "excluded"
+rc.exp2[which(rc.exp2$type == "ctrl"), 
+        "rareGroup"] <- "ctrl_neg"
+rc.exp2[which(rc.exp2$num == "positive"), 
+        "rareGroup"] <- "sample"
+
+rc.exp2 <- rc.exp2[order(rc.exp2$nseq),]
+
+p.exp2 <- ggplot(rc.exp2,
+                 aes(x = Sample,
+                     y = Species,
+                     group = sample.names)) +
+  geom_line(aes(color = rareGroup,
+                size = rareGroup)) +
+  scale_color_manual(name = "",
+                     values = c("ctrl_neg" = "blue",
+                                "sample" = "black",
+                                "excluded" = "red"),
+                     labels = c("ctrl_neg" = "Negative control",
+                                "sample" = "Sample",
+                                "excluded" = "Excluded")) +
+  scale_size_manual(name = "",
+                    values = c("ctrl_neg" = 0.5,
+                               "sample" = 0.3,
+                               "excluded" = 0.5),
+                    labels = c("ctrl_neg" = "Negative control",
+                               "sample" = "Sample",
+                               "excluded" = "Excluded")) +
+  geom_vline(xintercept = 12037,
+             linetype = 5) +
+  xlim(1,17000) +
+  xlab("Number of sequences") +
+  ylab("Number of species") +
+  ggtitle("Black-capped chickadee") +
+  theme_bw(base_size = 14,
+           base_family = "Times New Roman") +
+  theme(legend.position = c(0.85, 0.45),
+        plot.title = element_text(size = 14, face = "bold"))
+p.exp2
 
 
-cols <- rep("black", 20)
-cols[which(rowSums(comm.exp2) < 12037)] <- "red"
-cols[which(data.exp$'2'$type == "ctrl")] <- "blue"
-cols[which(data.exp$'2'$num == "positive")] <- "green"
+## Composite figure --------------------------------------------------------
 
-rarecurve(comm.exp2, step=100,label=FALSE, xlim=c(0,15000),
-          xlab = "Number of sequences",
-          ylab = "Number of species",
-          col = cols)
-abline(v = 12037, col = "red")
-mtext(side=3, adj=0, line=2.0, 'b', cex = 1.5) 
+p.rc <- ggarrange(p.exp1,p.exp2,
+                  nrow = 2, ncol = 1,
+                  labels = "auto")
 
-dev.off()
+p.rc
 
+ggsave(
+  "figure/Figure_A1.png",
+  p.rc,
+  width = 3740,
+  height = 4862,
+  units = "px",
+  dpi = 500
+)
 
 # Extraction control compare to samples -----------------------------------
 
@@ -168,7 +268,7 @@ p.ext <- ggarrange(p.bp.exp1.1, p.bp.exp1.2,
           widths = c(15,20))
 p.ext
 
-ggsave("figure/S1_2-BCC_Extraction_controls.png",
+ggsave("figure/Figure_A2.png",
        p.ext,
        dpi = 300,
        width = 10,
@@ -277,7 +377,7 @@ p.ext <- ggarrange(p.bp.exp2.1, p.bp.exp2.2,
                    widths = c(15,25))
 p.ext
 
-ggsave("figure/S1_3-BT_Extraction_controls.png",
+ggsave("figure/Figure_A3.png",
        p.ext,
        dpi = 300,
        width = 10,
@@ -405,7 +505,7 @@ p.pcr.all <- ggarrange(p.neg, p.pos, p.pcr,
 
 p.pcr.all
 
-ggsave("figure/S1_4-PCR_controls.png",
+ggsave("figure/Figure_A4.png",
        p.pcr.all,
        dpi = 300,
        width = 15,

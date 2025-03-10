@@ -55,8 +55,8 @@ tab.f <- flextable(div.pred.exp1) %>%
 tab.f
 
 save_as_docx(
-  "tableS2.2 - black-capped chickadee" = tab.f,
-  path = "table/S2_2-BCC_Diversity.docx")
+  "Table B.2. BCC" = tab.f,
+  path = "table/Table_B2_BCC.docx")
 
 
 # Blue tit ----------------------------------------------------------------
@@ -94,5 +94,5 @@ tab.f <- flextable(div.pred.exp2) %>%
 tab.f
 
 save_as_docx(
-  "tableS2.2 - blue tit" = tab.f,
-  path = "table/S2_2-BT-Diversity.docx")
+  "Table B.2. BT" = tab.f,
+  path = "table/Table_B2_BT.docx")

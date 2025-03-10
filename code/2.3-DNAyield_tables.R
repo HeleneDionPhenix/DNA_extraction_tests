@@ -55,8 +55,8 @@ tab.f <- flextable(dna.pred.exp1) %>%
 tab.f
 
 save_as_docx(
-  "tableS2.1 - black-capped chickadee" = tab.f,
-  path = "table/S2_1-BCC_DNAyield.docx")
+  "Table B.1. BCC" = tab.f,
+  path = "table/Table_B1_BCC.docx")
 
 # Blue tit ----------------------------------------------------------------
 
@@ -93,5 +93,5 @@ tab.f <- flextable(dna.pred.exp2) %>%
 tab.f
 
 save_as_docx(
-  "tableS2.1 - Blue tit" = tab.f,
-  path = "table/S2_1-BT_DNAyield.docx")
+  "Table B.1. BT" = tab.f,
+  path = "table/Table_B1_BT.docx")
