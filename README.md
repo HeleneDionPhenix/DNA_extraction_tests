@@ -4,6 +4,8 @@ DNA extraction tests from bird gut microbiomes by Hélène Dion-Phénix
 
 This repository contains R scripts for comparing different DNA extraction protocols used in the study of bacterial microbiota from the feces of black-capped chickadees and blue tits. We compared five commercial kits, two rinsing solutions prior to extraction, and two elution protocols. The code files are numbered and can be run sequentially, starting with the raw data, or any specific code can be run independently using intermediate *RData* objects. The general structure of the repository is given below. A README file is available for the data and the codes in the corresponding folders.
 
+For more information about the project, read the Preprint of our paper currently under review in Journal of Microbiological Methods: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5183369
+
 ## Project Directory Structure
 
 |─ DNA_extraction_tests.Rproj <br> 
@@ -40,24 +42,22 @@ This repository contains R scripts for comparing different DNA extraction protoc
 │&nbsp; &nbsp; &nbsp; │&nbsp; &nbsp; &nbsp; |-- fastq_BT (not included) <br>
 │&nbsp; &nbsp; &nbsp; │&nbsp; &nbsp; &nbsp; |-- SILVA138.1 (not included) <br>
 |─ figure <br>
-│&nbsp; &nbsp; &nbsp; |─ 1-DNAyield_Kit_comparison.png <br>
-│&nbsp; &nbsp; &nbsp; |─ 3-Diversity_Kit_comparison.png <br>
-│&nbsp; &nbsp; &nbsp; |─ 4_Barplot_Microbiota_Kit_comparison.png <br>
-│&nbsp; &nbsp; &nbsp; |─ 5-PCoA_Microbiota_Kit_comparison.png <br>
-│&nbsp; &nbsp; &nbsp; |─ S1_1-Rarefaction_Curves.png <br>
-│&nbsp; &nbsp; &nbsp; |─ S1_2-BCC_Extraction_controls.png <br>
-│&nbsp; &nbsp; &nbsp; |─ S1_3-BT_Extraction_controls.png <br>
-│&nbsp; &nbsp; &nbsp; |─ S1_4-PCR_controls.png <br>
-│&nbsp; &nbsp; &nbsp; |─ S3_1-PCoA_Without_StoolNorgen.png <br>
-│&nbsp; &nbsp; &nbsp; |─ S4_1-PCoA_Species_comparison.png <br>
+│&nbsp; &nbsp; &nbsp; |─ Figure_1.png <br>
+│&nbsp; &nbsp; &nbsp; |─ Figure_3.png <br>
+│&nbsp; &nbsp; &nbsp; |─ Figure_4.png <br>
+│&nbsp; &nbsp; &nbsp; |─ Figure_5.png <br>
+│&nbsp; &nbsp; &nbsp; |─ Figure_A1.png <br>
+│&nbsp; &nbsp; &nbsp; |─ Figure_A2.png <br>
+│&nbsp; &nbsp; &nbsp; |─ Figure_A3.png <br>
+│&nbsp; &nbsp; &nbsp; |─ Figure_A4.png <br>
+│&nbsp; &nbsp; &nbsp; |─ Figure_C1.png <br>
+│&nbsp; &nbsp; &nbsp; |─ Figure_C2.png <br>
 |─ table <br>
-│&nbsp; &nbsp; &nbsp; |─ 2-BCC_PERMANOVA.docx <br>
-│&nbsp; &nbsp; &nbsp; |─ S2_1-BCC_DNAyield.docx <br>
-│&nbsp; &nbsp; &nbsp; |─ S2_1-BT_DNAyield.docx <br>
-│&nbsp; &nbsp; &nbsp; |─ S2_2-BCC_Diversity.docx <br>
-│&nbsp; &nbsp; &nbsp; |─ S2_2-BT-Diversity.docx <br>
-│&nbsp; &nbsp; &nbsp; |─ S3_1-BCC_PERMANOVA_without_StoolNorgen.docx <br>
-│&nbsp; &nbsp; &nbsp; |─ S4_1-PERMANOVA_Species_comparison.docx <br>
+│&nbsp; &nbsp; &nbsp; |─ Table_2_formatted.docx <br>
+│&nbsp; &nbsp; &nbsp; |─ Table_B1_formatted <br>
+│&nbsp; &nbsp; &nbsp; |─ Table_B2_formatted.docx <br>
+│&nbsp; &nbsp; &nbsp; |─ Table_C1_formatted.docx <br>
+│&nbsp; &nbsp; &nbsp; |─ Table_C2_formatted.docx <br>
     
 *The folder fastq_BCC, fastq_BT, and SILVA138.1 need to be added to the directory where specified above to run code 0-dada2.R*
 

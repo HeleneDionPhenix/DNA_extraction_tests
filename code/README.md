@@ -1,4 +1,4 @@
-# DNA extraction tests - Data
+# DNA extraction tests - Code
 
 The code files are numbered and can be run sequentially, starting with the raw data, or any specific code can be run independently using intermediate *RData* objects.
 
@@ -11,7 +11,7 @@ based on dada2 tutorial https://benjjneb.github.io/dada2/tutorial.html
 
 ### 0-metadata_formatting.R
 
-R formatting of *.csv* file. This code generate the *0-metadata.RData* file used in different subsequent scrits.
+R formatting of *.csv* file. This code generate the *0-metadata.RData* file used in different subsequent scripts.
 
 ### 1.1-phyloseq.R
 
